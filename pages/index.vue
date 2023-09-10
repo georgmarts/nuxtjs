@@ -1,7 +1,6 @@
 <template>
     <div class="homepage">
           <Slideshow/>
-          <h1>Data: {{ posts }}</h1>
           <PostsGrid :posts="posts" :pending="pending"/>
     </div>
   </template>

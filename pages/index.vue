@@ -1,14 +1,7 @@
 <template>
-    <!-- <Suspense>
-      <template #default>
-      </template>
-      <template #fallback>
-        <h1>Loading...</h1>
-      </template>
-    </Suspense> -->
     <div class="homepage">
           <Slideshow/>
-          <h1>{{ posts }}</h1>
+          <h1>Data: {{ posts }}</h1>
           <PostsGrid :posts="posts" :pending="pending"/>
     </div>
   </template>

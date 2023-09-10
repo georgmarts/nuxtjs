@@ -6,7 +6,6 @@
             <textarea type="text" placeholder="Text" v-model="body"/>
             <div class="add-post-card__buttons">
                 <Button label="Add post" width="150px"/>
-                <!-- <button @click="addPost">Add post</button> -->
                 <Button label="Discard changes" width="150px" v-show="title.length > 0 || body.length > 0" @custom-function="emptyInputs"/>
                 <NuxtLink to="/posts" style="all: unset"><Button label="Go back" width="150px"/></NuxtLink>
             </div>

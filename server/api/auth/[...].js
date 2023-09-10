@@ -4,7 +4,7 @@ import { validateUser } from '~/utils/validateUser'
 
 
 export default NuxtAuthHandler({
-  secret: process.env.AUTH_SECRET,
+  secret: process.env.NUXT_AUTH_SECRET,
     events: {
       async signOut({ token, session }) {
         // Delete auth cookie on signout so it doesn't persist past log out

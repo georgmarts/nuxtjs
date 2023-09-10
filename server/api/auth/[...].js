@@ -32,10 +32,10 @@ export default NuxtAuthHandler({
       async authorize(credentials) {
         const { email, password } = credentials
         const user = await validateUser(email, password)
-        console.log(user)
-        if (user.length > 0) {
-          return user[0]
-        } else if (user.length === 0) {
+        console.log(user.data)
+        if (user.data.length > 0) {
+          return user.data[0]
+        } else if (user.data.length === 0) {
           throw new Error('Email or password is incorrect')
         } else {
           throw new Error('Something went wrong')

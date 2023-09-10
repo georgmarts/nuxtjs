@@ -8,7 +8,7 @@ export default {
         '@nuxtjs/supabase',
     ],
     auth: {
-        origin: process.env.AUTH_ORIGIN
+        origin: process.env.NUXT_AUTH_ORIGIN
     },
     supabase: {
        url: process.env.NUXT_SUPABASE_URL,

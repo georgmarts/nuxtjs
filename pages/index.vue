@@ -8,6 +8,7 @@
     </Suspense> -->
     <div class="homepage">
           <Slideshow/>
+          <h1>{{ posts }}</h1>
           <PostsGrid :posts="posts" :pending="pending"/>
     </div>
   </template>

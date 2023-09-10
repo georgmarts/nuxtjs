@@ -1,17 +1,8 @@
-import { query } from "~/utils/mysqlQuery"
+import { supabase } from "~/lib/supabaseClient"
 
 export default defineEventHandler(async (event) => {
-    const queryCustom = 'SELECT * FROM posts'
-    const values: never[] = []
-    const data = await query(queryCustom, values)
-    const x = true
-    if (!x) {
-        throw createError({
-          statusCode: 400,
-          statusMessage: 'ID should be an integer',
-        })
-    }
+    const { data } = await supabase.from('posts').select()
     return {
-        data,
+        data
     }
 })

@@ -11,7 +11,7 @@ export default {
         origin: process.env.AUTH_ORIGIN
     },
     supabase: {
-       url: 'https://fsmlpmfunvdgvvoanhds.supabase.co',
+       url: process.env.NUXT_SUPABASE_URL,
        key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzbWxwbWZ1bnZkZ3Z2b2FuaGRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQyMzc0MzksImV4cCI6MTk5OTgxMzQzOX0.i2Bn_RREm89pe-JXxj6ODl0_bi4bVTkfxFVwGTSYu0g',
        redirect: false,
        redirectOptions: {

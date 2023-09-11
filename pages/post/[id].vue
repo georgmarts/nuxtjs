@@ -11,14 +11,14 @@
             <div class='edit-post-card__loading--text loading-animation'></div>
             <div class='edit-post-card__loading--button loading-animation'></div>
         </div>
-        <div class='edit-post-card' v-if="!isEditingMode">
+        <div class='edit-post-card' v-show="!isEditingMode && !pending">
             <img src="/post-image.jpg" alt="">
             <h2>{{ post?.title }}</h2>
             <p>{{ post?.updatedAt }}</p>
             <p>{{ post?.body }}</p>
             <Button v-show="session?.user" label="Edit post" width="150px" @custom-function="handleEditMode"/>
         </div>
-        <form class='edit-post-card' @submit.prevent="updatePost" v-else>
+        <form class='edit-post-card' @submit.prevent="updatePost" v-show="isEditingMode && !pending">
             <h1>Edit post</h1>
             <input type="text" v-model="title">
             <textarea type="text" v-model="body"/>

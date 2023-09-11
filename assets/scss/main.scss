@@ -1,0 +1,23 @@
+@use '../scss/colors';
+
+html, body, #__nuxt, #__layout{
+    height:100% !important;
+    width: 100% !important;
+  }
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto Condensed', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: colors.$background;
+}

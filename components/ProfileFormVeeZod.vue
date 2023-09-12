@@ -105,11 +105,15 @@
     const { value: confirmPassword } = useField('confirmPassword')
 
     const onSubmit = handleSubmit(async (values, {resetForm}) => {
-        await useEditUser({firstName: values.firstName, lastName: values.lastName, phoneNumber: values.phoneNumber, password: values.password, id: user.value?.id})
+        const { response } = await useEditUser({firstName: values.firstName, lastName: values.lastName, phoneNumber: values.phoneNumber, password: values.password, id: user.value?.id})
         isModalOpen.value = true
-        fetchMessage.value = 'User information is successfully updated!'
-        isEditingMode.value = false
-        resetForm()
+        fetchMessage.value = response.message
+        if(response.message === 'Something went wrong') {
+            isEditingMode.value = true
+        } else {
+            isEditingMode.value = false
+            resetForm()
+        }
     })
 
     function discardChanges() {

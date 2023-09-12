@@ -24,8 +24,8 @@
             <textarea type="text" v-model="body"/>
             <div class="edit-post-card__buttons">
                 <Button label="Save" width="150px"/>
-                <Button label="Delete" width="150px" @custom-function="deletePost"/>
-                <Button label="Cancel" width="150px" @custom-function="discardChanges"/>
+                <Button label="Delete" width="150px" @custom-function="deletePost" type="button"/>
+                <Button label="Cancel" width="150px" @custom-function="discardChanges" type="button"/>
             </div>
         </form>
 

@@ -7,7 +7,7 @@
             <span>{{ errors.email }}</span>
         </div>
         <div class="signin-form__input-card">
-            <input type="text" placeholder="Password" v-model="password" :disabled="status === 'loading'">
+            <input type="password" placeholder="Password" v-model="password" :disabled="status === 'loading'">
             <span>{{ errors.password }}</span>
         </div>
         <Button label="Loading..." width="80%" disabled v-if="status === 'loading'"/>
